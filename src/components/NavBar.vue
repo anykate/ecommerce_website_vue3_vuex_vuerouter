@@ -29,7 +29,7 @@ const scrollToSection = (href) => {
 	<header class="max-w-full z-20 bg-secondary">
 		<div class="bg-black px-3 max-w-full">
 			<div class="flex justify-center items-center container px-0">
-				<h1 class="text-white text-lg">FREE DILEVRY</h1>
+				<h1 class="text-white text-lg">FREE DELIVERY</h1>
 			</div>
 		</div>
 		<nav
