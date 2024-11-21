@@ -81,7 +81,11 @@ const mutations = {}
 
 const actions = {}
 
-const getters = {}
+const getters = {
+	getProducts: (state) => state.products,
+	getProductId: (state) => state.productID,
+	getCart: (state) => state.cart,
+}
 
 export default createStore({
 	state,
