@@ -33,7 +33,7 @@ const scrollToSection = (href) => {
 			</div>
 		</div>
 		<nav
-			class="flex items-center relative p-3 justify-between bg-secondary md:h-16 h-28 mx-auto md:px-4 container flex-wrap md:flex-nowrap"
+			class="flex items-center relative justify-between bg-secondary md:h-16 h-28 max-w-screen px-8 flex-wrap md:flex-nowrap"
 		>
 			<!--Mobile Toggle Button start-->
 			<div class="md:hidden z-30">
