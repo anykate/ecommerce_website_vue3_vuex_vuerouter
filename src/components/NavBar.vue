@@ -4,7 +4,9 @@ import { useStore } from 'vuex'
 
 const store = useStore()
 const cart = computed(() => store.getters['getCart'])
+
 const isMenuOpen = ref(false)
+
 const Menu = ref([
 	{ name: 'Home', href: '/home' },
 	{ name: 'Collection', href: '#collection' },
@@ -33,7 +35,7 @@ const scrollToSection = (href) => {
 		<nav
 			class="flex items-center relative p-3 justify-between bg-secondary md:h-16 h-28 mx-auto md:px-4 container flex-wrap md:flex-nowrap"
 		>
-			<!--Mobile Toggle Button-->
+			<!--Mobile Toggle Button start-->
 			<div class="md:hidden z-30">
 				<button
 					class="block focus:outline-none"
@@ -63,13 +65,15 @@ const scrollToSection = (href) => {
 					</span>
 				</button>
 			</div>
+			<!--Mobile Toggle Button end-->
 
-			<!--LOGO-->
+			<!--LOGO start-->
 			<div class="text-3xl font-bold flex">
 				<h1 class="text-primary">LOGO</h1>
 			</div>
+			<!--LOGO end-->
 
-			<!--Responsive Menu-->
+			<!--Responsive Menu start-->
 			<div
 				:class="[
 					'fixed inset-0 z-20 flex flex-col items-center justify-center bg-primary md:relative md:bg-transparent md:flex md:justify-between md:flex-row md:space-x-5',
@@ -91,7 +95,9 @@ const scrollToSection = (href) => {
 					</li>
 				</ul>
 			</div>
-			<!--cart-->
+			<!--Responsive Menu end-->
+
+			<!--cart start-->
 			<ul
 				class="flex items-center justify-end lg:mr-0 lg:ml-0 ltr:mr-1.5 rtl:ml-1.5 ltr:md:-mr-1.5 rtl:md:-ml-1.5"
 			>
@@ -119,6 +125,7 @@ const scrollToSection = (href) => {
 					</a>
 				</li>
 			</ul>
+			<!--cart end-->
 		</nav>
 	</header>
 </template>
