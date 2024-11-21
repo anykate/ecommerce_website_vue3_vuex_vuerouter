@@ -8,7 +8,7 @@ const cart = computed(() => store.getters['getCart'])
 const isMenuOpen = ref(false)
 
 const Menu = ref([
-	{ name: 'Home', href: '/home' },
+	{ name: 'Home', href: '/' },
 	{ name: 'Collection', href: '#collection' },
 	{ name: `What\'s new`, href: '#new' },
 	{ name: 'Best Sellers', href: '#bestsellers' },
@@ -27,7 +27,7 @@ const scrollToSection = (href) => {
 
 <template>
 	<header class="max-w-full z-20 bg-secondary">
-		<div class="bg-black px-3 max-w-full">
+		<div class="bg-black px-3">
 			<div class="flex justify-center items-center container px-0">
 				<h1 class="text-white text-lg">FREE DELIVERY</h1>
 			</div>
