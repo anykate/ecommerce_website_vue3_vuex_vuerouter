@@ -70,7 +70,7 @@ const scrollToSection = (href) => {
 			<!--LOGO start-->
 			<div class="text-3xl font-bold flex">
 				<h1 class="text-primary">
-					<router-link to="/"> LOGO </router-link>
+					<router-link to="/">LOGO</router-link>
 				</h1>
 			</div>
 			<!--LOGO end-->
