@@ -1,9 +1,17 @@
-<script setup></script>
-
 <template>
-	<div>
-		<h1 class="bg-red-100 text-6xl">Hello World</h1>
-	</div>
+	<router-view v-slot="{ Component }">
+		<transition
+			name="fade"
+			mode="out-in"
+		>
+			<component :is="Component" />
+		</transition>
+	</router-view>
 </template>
 
-<style scoped></style>
+<script setup>
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
+AOS.init()
+</script>
