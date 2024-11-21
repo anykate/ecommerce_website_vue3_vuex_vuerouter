@@ -69,7 +69,9 @@ const scrollToSection = (href) => {
 
 			<!--LOGO start-->
 			<div class="text-3xl font-bold flex">
-				<h1 class="text-primary">LOGO</h1>
+				<h1 class="text-primary">
+					<router-link to="/"> LOGO </router-link>
+				</h1>
 			</div>
 			<!--LOGO end-->
 
@@ -85,13 +87,13 @@ const scrollToSection = (href) => {
 						v-for="item in Menu"
 						:key="item.name"
 					>
-						<a
-							:href="item.href"
+						<router-link
+							:to="item.href"
 							class="block transition hover:text-primary ease-linear text-2xl md:text-sm lg:text-lg text-black"
 							@click="scrollToSection(item.href)"
 						>
-							{{ item.name }}</a
-						>
+							{{ item.name }}
+						</router-link>
 					</li>
 				</ul>
 			</div>
