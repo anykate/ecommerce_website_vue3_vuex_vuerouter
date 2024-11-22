@@ -23,6 +23,13 @@ const scrollToSection = (href) => {
 		section.scrollIntoView({ behavior: 'smooth' })
 	}
 }
+
+defineProps({
+	url: {
+		type: String,
+		required: true,
+	},
+})
 </script>
 
 <template>
@@ -111,11 +118,11 @@ const scrollToSection = (href) => {
 						href="#"
 					>
 						<img
+							:src="`${url}cart.svg`"
 							alt="cart"
 							class="rtl:sm:ml-1 sm:mr-1.5 sm:w-[22px] w-[18px]"
 							height="22"
 							loading="lazy"
-							src="/cart.svg"
 							title="cart"
 							width="22"
 						/>

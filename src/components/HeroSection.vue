@@ -1,9 +1,16 @@
 <script setup>
 import { ref } from 'vue'
+import { Vue3Marquee } from 'vue3-marquee'
 import { Carousel, Navigation, Slide } from 'vue3-carousel'
 import 'vue3-carousel/dist/carousel.css'
 
-const images = ref(['pic1.jpg', 'pic2.jpg', 'pic3.jpg', 'pic4.jpg'])
+const props = defineProps({
+	url: {
+		type: String,
+		required: true,
+	},
+})
+const images = ref([`${props.url}pic1.jpg`, `${props.url}pic2.jpg`, `${props.url}pic3.jpg`, `${props.url}pic4.jpg`])
 
 const news = ref([
 	'Stainless Steel Accessories',
@@ -27,9 +34,9 @@ const news = ref([
 					>
 						Let us make you shine !
 						<img
+							:src="`${url}gif.gif`"
 							alt="shining"
 							class="w-[32%] inline-block -ml-10 align-middle"
-							src="/gif.gif"
 						/>
 					</h1>
 					<button
@@ -76,7 +83,7 @@ const news = ref([
 						<span class="svg w-embed inline-block align-middle">
 							<img
 								alt="sparkle"
-								src="/sparkle.svg"
+								src="https://raw.githubusercontent.com/anykate/ecommerce_website_vue3_vuex_vuerouter/assets/sparkle.svg"
 							/>
 						</span>
 					</span>
@@ -102,35 +109,15 @@ const news = ref([
 		0 0 25px rgba(255, 255, 255, 0.6);
 }
 
-.carousel__slide {
-	padding: 10px;
-}
-
-.carousel__prev,
-.carousel__next {
-	box-sizing: content-box;
-	border: 5px solid white;
-	border-radius: 50%;
-	background-color: white;
-}
-
 .outer-running-about {
 	z-index: 1;
 	width: 100.5%;
-	grid-column-gap: 0px;
-	grid-row-gap: 0px;
+	grid-column-gap: 0;
+	grid-row-gap: 0;
 	display: flex;
 	position: relative;
 	left: -0.5rem;
 	transform: translate(0, -10%);
-}
-
-.scroll-text {
-	display: inline-block;
-	padding-left: 100%;
-	animation: scroll-left 15s linear infinite;
-	font-size: 1rem;
-	color: white;
 }
 
 .head-7 {

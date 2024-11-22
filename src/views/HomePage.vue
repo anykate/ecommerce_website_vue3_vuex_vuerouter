@@ -2,6 +2,8 @@
 import { defineAsyncComponent } from 'vue'
 import LoadingSpinner from '@/components/LoadingSpinner.vue'
 
+const url = 'https://raw.githubusercontent.com/anykate/ecommerce_website_vue3_vuex_vuerouter/assets/'
+
 //components lazy loading
 const NavBar = defineAsyncComponent(() => import('@/components/NavBar.vue'))
 const HeroSection = defineAsyncComponent(() => import('@/components/HeroSection.vue'))
@@ -20,8 +22,8 @@ const BackToTop = defineAsyncComponent(() => import('@/components/BackToTop.vue'
 		<Suspense>
 			<template #default>
 				<div class="font-playfair">
-					<NavBar />
-					<HeroSection />
+					<NavBar :url="url" />
+					<HeroSection :url="url" />
 					<CollectionComponent />
 					<ExclusiveSection />
 					<BestSellers />
