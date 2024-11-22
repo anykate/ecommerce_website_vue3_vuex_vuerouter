@@ -82,8 +82,8 @@ const news = ref([
 						{{ word }}
 						<span class="svg w-embed inline-block align-middle">
 							<img
+								:src="`${url}sparkle.svg`"
 								alt="sparkle"
-								src="https://raw.githubusercontent.com/anykate/ecommerce_website_vue3_vuex_vuerouter/assets/sparkle.svg"
 							/>
 						</span>
 					</span>
