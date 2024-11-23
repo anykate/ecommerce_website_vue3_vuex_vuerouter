@@ -17,10 +17,12 @@ const Menu = ref([
 ])
 
 const scrollToSection = (href) => {
-	isMenuOpen.value = false
-	const section = document.querySelector(href)
-	if (section) {
-		section.scrollIntoView({ behavior: 'smooth' })
+	if (href !== '/') {
+		isMenuOpen.value = false
+		const section = document.querySelector(href)
+		if (section) {
+			section.scrollIntoView({ behavior: 'smooth' })
+		}
 	}
 }
 
